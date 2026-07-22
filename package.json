@@ -16,7 +16,7 @@
     "electron",
     "desktop"
   ],
-  "author": "PW Office Team",
+  "author": "PW Office Team <support@pwoffice.com>",
   "license": "ISC",
   "devDependencies": {
     "electron": "^43.2.0",
@@ -91,7 +91,8 @@
         "AppImage",
         "deb"
       ],
-      "category": "Office"
+      "category": "Office",
+      "maintainer": "PW Office Team <support@pwoffice.com>"
     }
   }
 }
