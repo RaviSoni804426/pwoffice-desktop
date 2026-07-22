@@ -1,0 +1,57 @@
+{
+  "name": "pwoffice-desktop",
+  "productName": "PW Office",
+  "version": "1.0.0",
+  "description": "Desktop application wrapper for PW Office",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "keywords": [
+    "pwoffice",
+    "electron",
+    "desktop"
+  ],
+  "author": "PW Office Team",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3",
+    "png-to-ico": "^3.0.2"
+  },
+  "build": {
+    "appId": "com.pwoffice.desktop",
+    "productName": "PW Office",
+    "copyright": "Copyright © 2026 PW Office",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "config.json",
+      "splash.html",
+      "error.html",
+      "build/**/*"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PW Office"
+    }
+  }
+}
