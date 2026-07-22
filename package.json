@@ -6,10 +6,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:win": "electron-builder --win",
-    "build:mac": "electron-builder --mac",
-    "build:linux": "electron-builder --linux",
-    "build:all": "electron-builder -wml"
+    "build:win": "electron-builder --win --publish=never",
+    "build:mac": "electron-builder --mac --publish=never",
+    "build:linux": "electron-builder --linux --publish=never",
+    "build:all": "electron-builder -wml --publish=never"
   },
   "keywords": [
     "pwoffice",
@@ -27,6 +27,7 @@
     "appId": "com.pwoffice.desktop",
     "productName": "PW Office",
     "copyright": "Copyright © 2026 PW Office",
+    "publish": null,
     "directories": {
       "output": "dist",
       "buildResources": "build"
